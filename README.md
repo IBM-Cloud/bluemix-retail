@@ -1,15 +1,18 @@
 installation
 --------------------------------------------------------------------------------
 
-* Create 2 Cloudant databases named alerts and districts. 
-* Create API keys for each and give them admin rights.
-* Note your Cloudant URL, e.g. https://BLAHBLAH.cloudant.com, and database API key and password values.
-* From your terminal, execute
+Create 2 Cloudant databases named alerts and districts. 
+
+Create API keys for each and give them admin rights.
+
+Note your Cloudant URL, e.g. https://BLAHBLAH.cloudant.com, and database API key and password values.
+
+From your terminal, execute
 
 	git clone https://github.com/CodenameBlueMix/bluemix-retail.git
 	make install
 	
-* Supply configuration parameters as prompted.
+Supply configuration parameters as prompted.
 
 usage
 --------------------------------------------------------------------------------
