@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<dwml version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.nws.noaa.gov/forecasts/xml/DWMLgen/schema/DWML.xsd">
+  <head>
+    <product srsName="WGS 1984" concise-name="time-series" operational-mode="official">
+      <title>NOAA's National Weather Service Forecast Data</title>
+      <field>meteorological</field>
+      <category>forecast</category>
+      <creation-date refresh-frequency="PT1H">2014-04-21T14:54:26Z</creation-date>
+    </product>
+    <source>
+      <more-information>http://www.nws.noaa.gov/forecasts/xml/</more-information>
+      <production-center>Meteorological Development Laboratory<sub-center>Product Generation Branch</sub-center></production-center>
+      <disclaimer>http://www.nws.noaa.gov/disclaimer.html</disclaimer>
+      <credit>http://www.weather.gov/</credit>
+      <credit-logo>http://www.weather.gov/images/xml_logo.gif</credit-logo>
+      <feedback>http://www.weather.gov/feedback.php</feedback>
+    </source>
+  </head>
+  <data>
+    <location>
+      <location-key>point1</location-key>
+      <point latitude="38.99" longitude="-77.01"/>
+    </location>
+    <moreWeatherInformation applicable-location="point1">http://forecast.weather.gov/MapClick.php?textField1=38.99&amp;textField2=-77.01</moreWeatherInformation>
+    <time-layout time-coordinate="local" summarization="none">
+      <layout-key>k-p3h-n9-1</layout-key>
+      <start-valid-time>2014-04-22T02:00:00-04:00</start-valid-time>
+      <start-valid-time>2014-04-22T05:00:00-04:00</start-valid-time>
+      <start-valid-time>2014-04-22T08:00:00-04:00</start-valid-time>
+      <start-valid-time>2014-04-22T11:00:00-04:00</start-valid-time>
+      <start-valid-time>2014-04-22T14:00:00-04:00</start-valid-time>
+      <start-valid-time>2014-04-22T17:00:00-04:00</start-valid-time>
+      <start-valid-time>2014-04-22T20:00:00-04:00</start-valid-time>
+      <start-valid-time>2014-04-22T23:00:00-04:00</start-valid-time>
+      <start-valid-time>2014-04-23T02:00:00-04:00</start-valid-time>
+    </time-layout>
+    <time-layout time-coordinate="local" summarization="none">
+      <layout-key>k-p6h-n5-2</layout-key>
+      <start-valid-time>2014-04-21T20:00:00-04:00</start-valid-time>
+      <end-valid-time>2014-04-22T02:00:00-04:00</end-valid-time>
+      <start-valid-time>2014-04-22T02:00:00-04:00</start-valid-time>
+      <end-valid-time>2014-04-22T08:00:00-04:00</end-valid-time>
+      <start-valid-time>2014-04-22T08:00:00-04:00</start-valid-time>
+      <end-valid-time>2014-04-22T14:00:00-04:00</end-valid-time>
+      <start-valid-time>2014-04-22T14:00:00-04:00</start-valid-time>
+      <end-valid-time>2014-04-22T20:00:00-04:00</end-valid-time>
+      <start-valid-time>2014-04-22T20:00:00-04:00</start-valid-time>
+      <end-valid-time>2014-04-23T02:00:00-04:00</end-valid-time>
+    </time-layout>
+    <time-layout time-coordinate="local" summarization="none">
+      <layout-key>k-p6h-n4-3</layout-key>
+      <start-valid-time>2014-04-21T20:00:00-04:00</start-valid-time>
+      <end-valid-time>2014-04-22T02:00:00-04:00</end-valid-time>
+      <start-valid-time>2014-04-22T02:00:00-04:00</start-valid-time>
+      <end-valid-time>2014-04-22T08:00:00-04:00</end-valid-time>
+      <start-valid-time>2014-04-22T08:00:00-04:00</start-valid-time>
+      <end-valid-time>2014-04-22T14:00:00-04:00</end-valid-time>
+      <start-valid-time>2014-04-22T14:00:00-04:00</start-valid-time>
+      <end-valid-time>2014-04-22T20:00:00-04:00</end-valid-time>
+    </time-layout>
+    <time-layout time-coordinate="local" summarization="none">
+      <layout-key>k-p24h-n2-4</layout-key>
+      <start-valid-time>2014-04-22T08:00:00-04:00</start-valid-time>
+      <end-valid-time>2014-04-22T20:00:00-04:00</end-valid-time>
+      <start-valid-time>2014-04-23T08:00:00-04:00</start-valid-time>
+      <end-valid-time>2014-04-23T20:00:00-04:00</end-valid-time>
+    </time-layout>
+    <parameters applicable-location="point1">
+      <temperature type="apparent" units="Fahrenheit" time-layout="k-p3h-n9-1">
+        <name>Apparent Temperature</name>
+        <value>54</value>
+        <value>52</value>
+        <value>56</value>
+        <value>68</value>
+        <value>74</value>
+        <value>74</value>
+        <value>65</value>
+        <value>58</value>
+        <value>54</value>
+      </temperature>
+      <precipitation type="liquid" units="inches" time-layout="k-p6h-n5-2">
+        <name>Liquid Precipitation Amount</name>
+        <value>0.00</value>
+        <value>0.00</value>
+        <value>0.03</value>
+        <value>0.09</value>
+        <value>0.01</value>
+      </precipitation>
+      <wind-speed type="sustained" units="knots" time-layout="k-p3h-n9-1">
+        <name>Wind Speed</name>
+        <value>5</value>
+        <value>5</value>
+        <value>5</value>
+        <value>6</value>
+        <value>9</value>
+        <value>12</value>
+        <value>14</value>
+        <value>13</value>
+        <value>13</value>
+      </wind-speed>
+      <cloud-amount type="total" units="percent" time-layout="k-p3h-n9-1">
+        <name>Cloud Cover Amount</name>
+        <value>52</value>
+        <value>52</value>
+        <value>54</value>
+        <value>70</value>
+        <value>91</value>
+        <value>54</value>
+        <value>35</value>
+        <value>29</value>
+        <value>22</value>
+      </cloud-amount>
+      <precipitation type="snow" units="inches" time-layout="k-p6h-n4-3">
+        <name>Snow Amount</name>
+        <value>0.00</value>
+        <value>0.00</value>
+        <value>0.00</value>
+        <value>0.00</value>
+      </precipitation>
+      <humidity type="maximum relative" units="percent" time-layout="k-p24h-n2-4">
+        <name>Daily Maximum Relative Humidity</name>
+        <value>77</value>
+        <value>63</value>
+      </humidity>
+      <weather time-layout="k-p3h-n9-1">
+        <name>Weather Type, Coverage, and Intensity</name>
+        <weather-conditions/>
+        <weather-conditions/>
+        <weather-conditions/>
+        <weather-conditions/>
+        <weather-conditions>
+          <value coverage="chance" intensity="light" weather-type="rain showers" qualifier="none">
+            <visibility units="statute miles">6+</visibility>
+          </value>
+          <value coverage="slight chance" intensity="none" additive="and" weather-type="thunderstorms" qualifier="none">
+            <visibility units="statute miles">6+</visibility>
+          </value>
+        </weather-conditions>
+        <weather-conditions>
+          <value coverage="likely" intensity="light" weather-type="rain showers" qualifier="none">
+            <visibility units="statute miles">6+</visibility>
+          </value>
+          <value coverage="slight chance" intensity="none" additive="and" weather-type="thunderstorms" qualifier="none">
+            <visibility units="statute miles">6+</visibility>
+          </value>
+        </weather-conditions>
+        <weather-conditions/>
+        <weather-conditions/>
+        <weather-conditions/>
+      </weather>
+    </parameters>
+  </data>
+</dwml>

@@ -1,0 +1,9 @@
+.idea
+bower_components
+node_modules
+tmp
+logs
+configure
+manifest.yml
+cloudant.js
+cloudantClient.js

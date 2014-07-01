@@ -1,0 +1,74 @@
+<div class="col-xs-6">
+    <google-map 
+            center="map.center" 
+            zoom="map.zoom" 
+            dragging="map.dragging"
+            draggable="true"
+            control="map.control">
+        <marker ng-repeat="m in map.markers" coords="m" icon="m.icon" click="onMarkerClicked(m)">
+            <marker-label content="m.title" anchor="22 0" class="marker-labels"/>
+            <window ng-cloak  coords="map.infoWindowWithCustomClass.coords" isIconVisibleOnClick="false" options="map.infoWindowWithCustomClass.options">
+                    <p>{{ m.title }}<br>
+                    {{ m.alert }}<br>
+                    <a href=#/forecast.html${{ m.number }}>Sales Forecast</a>
+                    </p>
+            </window>
+        </marker>
+        <!-- <marker coords='{ latitude:36.029414,longitude:-78.918137 }'
+            icon='{ url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png" }'>
+        </marker> -->
+    </google-map>
+</div>
+
+<div class="col-xs-6">
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Weather Alerts Impacting District</h3>
+                </div>
+                <ol>
+                <div class="panel-body" ng-repeat="store in storelist track by $index">
+                    <li><address>
+                    <strong>{{ store.name }}</strong><br>
+                    {{ store.alert }}
+                    </address>
+                </div>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Override Weather Alerts</h3>
+                </div>
+                <div class="panel-body">
+                  <form role="form">
+                     <div class="form-group">
+                        <label for="storename">Store</label>
+           
+                        <!--<select class="form-control" ng-repeat="store in storelist track by $index">
+                          <option>{{ store.name }}</option>-->
+                        <select class="form-control" ng-model="sstore" ng-options="store.name for store in storelist">
+                        </select>
+
+                     </div>
+
+                     <div class="form-group">
+                         <label for="weathercond">Weather Condition</label>
+                         <select class="form-control" ng-model="salert" ng-options="alert for alert in alertlist">
+                         <!-- <option>{{ alert }}</option> -->
+                         </select>
+                     </div>
+      
+                     <button type="submit" ng-click="weatherOverride()" class="btn btn-default">Submit</button>
+                  </form>
+
+                </div>
+            </div>
+        </div> <!-- row -->
+    </div><!-- container-fluid -->
+</div>

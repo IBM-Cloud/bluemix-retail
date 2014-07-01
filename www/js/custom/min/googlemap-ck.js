@@ -1,0 +1,1 @@
+function init_map(){var e=new google.maps.LatLng(45.430817,12.331516),n={center:e,zoom:14},o=new google.maps.Marker({position:e,map:a,title:"Venice"}),a=new google.maps.Map(document.getElementById("map-container"),n);o.setMap(a)}google.maps.event.addDomListener(window,"load",init_map);

@@ -1,0 +1,7 @@
+{ 
+    "-comment-": "this is a sample config.json file; needs a gmapKey",
+
+    "port":    3000,
+    "verbose": true,
+    "gmapKey": "see: https://developers.google.com/maps/documentation/javascript/tutorial#api_key"
+}

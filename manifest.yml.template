@@ -1,0 +1,23 @@
+---
+
+# this file is by `cf push` to determine the settings your your app
+
+applications:
+- name: $RETAIL_APP_NAME
+  command: node server.js
+  host: $RETAIL_APP_HOST
+  instances: 1
+  memory: 1024M
+  path: .
+- name:  $WEATHER_APP_NAME
+  command:  node weather-service.js
+  host:  $WEATHER_APP_HOST
+  instances:  1
+  memory: 512M
+  path: ./weather/
+- name:  $SPSS_APP_NAME
+  command:  node spss-service.js
+  host:  $SPSS_APP_HOST
+  instances:  1
+  memory:  512M
+  path: ./spss/

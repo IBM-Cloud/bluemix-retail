@@ -1,0 +1,8 @@
+RETAIL_APP_NAME := bluemix-retail
+RETAIL_APP_HOST := bluemix-retail-$(RANDOM)
+WEATHER_APP_NAME := bluemix-weather
+WEATHER_APP_HOST := bluemix-weather-$(RANDOM)
+SPSS_APP_NAME := bluemix-spss
+SPSS_APP_HOST := bluemix-spss-$(RANDOM)
+ALERTS_DATABASE_SERVICE_NAME := cloudant-alerts-db-$(RANDOM)
+DISTRICTS_DATABASE_SERVICE_NAME := cloudant-districts-db-$(RANDOM)

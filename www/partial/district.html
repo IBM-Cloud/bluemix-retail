@@ -1,0 +1,42 @@
+<div class="col-xs-6">
+    <google-map 
+            center="map.center" 
+            zoom="map.zoom" 
+            dragging="map.dragging"
+            draggable="true"
+            control="map.control">
+        <marker ng-repeat="m in map.markers" coords="m" icon="m.icon" click="onMarkerClicked(m)">
+            <marker-label content="m.title" anchor="22 0" class="marker-labels"/>
+            <window show="'showWindow'"  coords="m" isIconVisibleOnClick="false" ng-cloak >
+                    <p>{{ m.title }}<br>
+                    {{ m.alert }}<br>
+                    <a href="#/forecast.html?{{ m.number }}">Sales Forecast</a>
+                    </p>
+            </window>
+        </marker>
+    </google-map>
+</div>
+
+<div class="col-xs-6">
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">District Stores</h3>
+                </div>
+                <ol>
+                <div class="panel-body" ng-repeat="store in storelist track by $index">
+                    <li><address>
+                    <strong>{{ store.name }}</strong><br>
+                    {{ store.saddr }}<br>
+                    {{ store.city }}, {{ store.state }} {{ store.zip }}<br>
+                    <abbr title=\"Phone\">P:</abbr>{{ store.phone }}
+                    </address>
+                </div>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>

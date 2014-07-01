@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="tomek">
+        <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+        <title>Bluemix'n a Retail Dashboard</title>
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- css/normalize.css is included in bootstrap.less, replacing main.css  -->
+        <!-- <link rel="stylesheet" href="css/normalize.css">-->
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- Modernizr -->
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <!-- Respond.js for IE 8 or less only -->
+        <!--[if (lt IE 9) & (!IEMobile)]>
+          <script src="js/vendor/respond.min.js"></script>
+        <![endif]-->
+
+        <style type="text/css">  
+            #map {
+                height: 400px;
+            }
+            html,body,.row,.col-xs-6 { height:100% }
+            .angular-google-map-container { height: 400px; }
+            .infoWindowContent {
+                font-size:  14px !important;
+                border-top: 1px solid #ccc;
+                padding-top: 10px;
+            }
+        </style>    
+    </head>
+    <body ng-controller="MainController">
+        <!--[if lte IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <!--<p>Hello world! This is HTML5 Boilerplate.</p>-->
+        <header role="banner">
+          <div class="container">
+            <nav role="navigation" class="navbar navbar-static-top navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" alt="Bootstrappin'" width="120">
+                      </a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#/district">
+                                <span class="glyphicon glyphicon-home"></span>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/district">
+                                <span class="glyphicon glyphicon-picture"></span>
+                                District Map
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/alerts">
+                                <span class="glyphicon glyphicon-flash"></span>
+                                Alerts
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#forecast">
+                                <span class="glyphicon glyphicon-folder-open"></span>
+                                Sales Forecast
+                            </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span class="icon fa fa-envelope"></span>
+                            Contact
+                          </a>
+                        </li>
+                      </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
+        </header>
+
+        <div id="wrap">
+            <main role="main" class="container clear-top">
+
+                <div class="view-container">
+                    <div ng-view class="view-frame">Loading ...</div>
+                </div>
+
+            </main>
+        </div>
+
+        <footer role="contentinfo">
+
+          <div class="container">
+            <div class="row">
+
+                <div class="col-sm-4 col-md-2">
+                  <h3>Categories</h3>
+                  <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Another link</a></li>
+                    <li><a href="#">Link again</a></li>
+                    <li><a href="#">Try this</a></li>
+                    <li><a href="#">Something else</a></li>
+                    <li><a href="#">Another else</a></li>
+                    <li><a href="#">Finally else</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-4 col-md-2">
+                  <h3>Topic</h3>
+                  <ul>
+                     <li><a href="#">Link</a></li>
+                    <li><a href="#">Another link</a></li>
+                    <li><a href="#">Link again</a></li>
+                    <li><a href="#">Try this</a></li>
+                    <li><a href="#">Something else</a></li>
+                    <li><a href="#">Another else</a></li>
+                    <li><a href="#">Finally else</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-4 col-md-2">
+                  <h3>Other</h3>
+                  <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Another link</a></li>
+                    <li><a href="#">Link again</a></li>
+                    <li><a href="#">Try this</a></li>
+                    <li><a href="#">Something else</a></li>
+                    <li><a href="#">Another else</a></li>
+                    <li><a href="#">Finally else</a></li>
+                  </ul>
+                </div>
+
+              <!-- Add the extra clearfix for only the required viewport -->
+              <div class="clearfix visible-sm"></div>
+
+              <div class="about col-sm-12 col-md-6">
+                <h3>About Us</h3>
+                <p>Node.js Retail Demo on BlueMix.  Maps Retail stores in a district using Google Maps API.  Dynamic weather information from NOAA via REST API, and identifies weather alerts that have historically been shown to impact sales.  Forecasts products sales using SPSS Analytics.  Dashboard User Interface using Bootstrap. </p>
+                <p><a class="btn btn-default btn-xs pull-right" href="#">Learn more <span class="fa fa-arrow-circle-right"></span></a></p>
+              </div>
+            </div><!-- /.row -->
+
+            <ul class="social">
+              <li><a href="#" title="Twitter Profile"><span class="icon fa fa-twitter"></span></a></li>
+              <li><a href="#" title="Facebook Page"><span class="icon fa fa-facebook"></span></a></li>
+              <li><a href="#" title="LinkedIn Profile"><span class="icon fa fa-linkedin"></span></a></li>
+              <li><a href="#" title="Google+ Profile"><span class="icon fa fa-google-plus"></span></a></li>
+              <li><a href="#" title="GitHub Profile"><span class="icon fa fa-github-alt"></span></a></li>
+            </ul>
+
+            <p class="footer-brand"><a href="index.html"><img src="img/logo.png" width="80" alt="Bootstrappin'"></a></p>
+
+          </div><!-- /.container -->
+        </footer>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+        <!--<script src="../../dist/js/bootstrap.min.js"></script>-->
+        <!--<script src="../../assets/js/docs.min.js"></script>-->
+        
+        <!-- hosted Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <!-- local fallback version of Jquery -->
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <!-- hosted AngularJS -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+
+        <!-- bootstrap javascript -->
+        <script src="js/plugins.js"></script>
+        <!-- custom code -->
+        <script src="js/main.js"></script>
+
+        <!--  google maps api  -->
+        <script src='http://maps.googleapis.com/maps/api/js?sensor=false'></script>
+        <script src='js/underscore-min.js'></script>
+        <script src='js/angular-google-maps.js'></script>
+
+        <!-- custom angular  -->
+        <script type="text/javascript" src="js/custom/app.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+
+    </body>
+</html>
