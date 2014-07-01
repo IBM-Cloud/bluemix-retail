@@ -1,3 +1,21 @@
+installation
+--------------------------------------------------------------------------------
+
+To run on Bluemix:
+
+1. Git clone this repo
+2. Create 2 Cloudant databases named alerts and districts. Create API keys for each and give them admin rights
+3. In the cloned directory run make install and and supply configuration parameters as prompted
+
+usage
+--------------------------------------------------------------------------------
+
+http://hello-weather.ng.bluemix.net/api/v1/weather-by-zip/<zip>.json?year=2014&month=4&day=28 
+
+http://hello-weather.ng.bluemix.net/api/v1/weather-by-geo/<lat>,<lon>.json?year=2014&month-4&day=28
+
+Note:  date must be within 7 days of current date 
+
 hello-weather
 ================================================================================
 
@@ -10,29 +28,6 @@ NDFD database:
 	http://graphical.weather.gov/xml/docs/elementInputNames.php
 
 	http://www.nws.noaa.gov/ndfd/technical.htm#elements
-
-
-installation
---------------------------------------------------------------------------------
-
-On workstation:  
-
-	node server.js 
-
-On Bluemix:  
-
-	cf api <url> 
-	cf login 
-	cf push 
-
-usage
---------------------------------------------------------------------------------
-
-http://hello-weather.ng.bluemix.net/api/v1/weather-by-zip/<zip>.json?year=2014&month=4&day=28 
-
-http://hello-weather.ng.bluemix.net/api/v1/weather-by-geo/<lat>,<lon>.json?year=2014&month-4&day=28
-
-Note:  date must be within 7 days of current date 
 
 result
 --------------------------------------------------------------------------------
