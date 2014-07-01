@@ -1,24 +1,20 @@
 installation
 --------------------------------------------------------------------------------
 
-Create 2 Cloudant databases named alerts and districts. 
-Create API keys for each and give them admin rights.
-Note your Cloudant URL, e.g. https://USERNAME.cloudant.com, and database API key and password values.
-From your command line
+* Create 2 Cloudant databases named alerts and districts. 
+* Create API keys for each and give them admin rights.
+* Note your Cloudant URL, e.g. https://BLAHBLAH.cloudant.com, and database API key and password values.
+* From your terminal, execute
 
 	git clone https://github.com/CodenameBlueMix/bluemix-retail.git
 	make install
 	
-Supply configuration parameters as prompted
+* Supply configuration parameters as prompted.
 
 usage
 --------------------------------------------------------------------------------
 
-http://hello-weather.ng.bluemix.net/api/v1/weather-by-zip/<zip>.json?year=2014&month=4&day=28 
-
-http://hello-weather.ng.bluemix.net/api/v1/weather-by-geo/<lat>,<lon>.json?year=2014&month-4&day=28
-
-Note:  date must be within 7 days of current date 
+Browse to URL for the bluemix-retail application in Bluemix.
 
 hello-weather
 ================================================================================
