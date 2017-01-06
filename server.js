@@ -22,7 +22,7 @@ var soupSelect = require("soupselect");
 var _ = require("underscore");
 var select = soupSelect.select;
 
-var port = (process.env.VCAP_APP_PORT || 8192);
+var port = (process.env.PORT || 8192);
 var host = (process.env.VCAP_APP_HOST || 'localhost');
 var selfurl = JSON.parse(process.env.VCAP_APPLICATION || '{"uris":["' + 'https://' + host + ':' + port + '"]}').uris[0] 
 
